@@ -1,0 +1,100 @@
+/* style.css */
+body {
+  font-family: 'Open Sans', sans-serif; /* フォントを変更 */
+  background-color: #e9ecef; /* 背景色を変更 */
+  color: #333; /* 文字色を変更 */
+}
+
+header {
+  background-color: #f8f9fa; /* ヘッダーの背景色 */
+  padding: 20px 0; /* ヘッダーの余白 */
+}
+
+.container {
+  padding-top: 20px;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif; /* Airbnb っぽいフォント */
+  font-size: 2.5em; /* 文字サイズを小さくする */
+  margin-bottom: 20px;
+  color: #333; /* 文字色 */
+}
+
+/* カード */
+.card {
+  border: none;
+  border-radius: 10px; /* 角丸にする */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 影をつける */
+  margin-bottom: 15px;
+}
+
+.card-header {
+  background-color: #fff; /* 背景色を変更 */
+  border-top-left-radius: 10px; /* 角丸にする */
+  border-top-right-radius: 10px; /* 角丸にする */
+  padding: 10px;
+  border-bottom: 1px solid #eee; /* ボーダーを追加 */
+}
+
+.card-title {
+  font-weight: bold;
+  color: #333;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-text {
+  color: #666;
+}
+
+.badge-secondary {
+  background-color: #6c757d; /* バッジの色を変更 */
+}
+
+.restaurant-list li span {
+  font-size: 1.2em; /* 番号を大きくする */
+  font-weight: bold;
+  color: #ff5722; /* 番号をオレンジ色にする */
+  margin-right: 10px;
+}
+
+/* 地図 */
+#map {
+  height: 400px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* マージン追加 */
+.row.mt-4 {
+  margin-top: 40px; /* カードとマップの間にマージンを追加 */
+}
+
+/* リンクの色とスタイル */
+.card-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .col-md-4 {
+    width: 100%;
+  }
+}
+
+/* card-header の背景色変更 */
+.card-header {
+  background-color: #f8f9fa; /* 背景色を変更 */
+  border-top-left-radius: 10px; /* 角丸にする */
+  border-top-right-radius: 10px; /* 角丸にする */
+  padding: 10px;
+  border-bottom: 1px solid #eee; /* ボーダーを追加 */
+}
