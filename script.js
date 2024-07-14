@@ -23,6 +23,7 @@ function initMap() {
         const restaurants = lines.slice(1).map((line, index) => {
           const values = line.split('\t');
           const coords = values[3].split(','); // 4列目をカンマで分割
+          const tags = values[4].split(','); // 5列目をカンマで分割
           return {
             id: index + 1, // 番号を付与
             店名: values[0].trim(),
@@ -30,6 +31,7 @@ function initMap() {
             メモ: values[1].trim(),
             緯度: parseFloat(coords[0]), // 緯度を取得
             経度: parseFloat(coords[1]), // 経度を取得
+            タグ: tags // タグを取得
           };
         });
 
@@ -52,6 +54,9 @@ function initMap() {
         <div class="card rounded">  
           <div class="card-header bg-light text-center">
             <h5 class="card-title"><span class="badge badge-secondary">${restaurant.id}.</span> <a href="${restaurant.URL}" class="card-link text-dark" style="text-decoration: underline;">${restaurant.店名}</a></h5> 
+            <div class="tags">
+              ${restaurant.タグ.map(tag => `<span class="badge badge-pill badge-secondary">${tag}</span>`).join('')} 
+            </div>
           </div>
           <div class="card-body">
             <p class="card-text">${restaurant.メモ}</p>
